@@ -198,9 +198,13 @@
 // If you are using a pre-configured hotend then you can use one of the value sets by uncommenting it
 
 // Proosha
-    #define  DEFAULT_Kp 22.84
-    #define  DEFAULT_Ki 2.11
-    #define  DEFAULT_Kd 61.74
+    /* #define  DEFAULT_Kp 24.45 */
+    /* #define  DEFAULT_Ki 2.52 */
+    /* #define  DEFAULT_Kd 59.38 */
+    #define  DEFAULT_Kp 23.79
+    #define  DEFAULT_Ki 2.39
+    #define  DEFAULT_Kd 59.14
+
 
 // Ultimaker
 
@@ -240,9 +244,18 @@
 //from FOPDT model - kp=.39 Tp=405 Tdead=66, Tc set to 79.2, aggressive factor of .15 (vs .1, 1, 10)
 
 // Proosha
-    #define  DEFAULT_bedKp 71.43
-    #define  DEFAULT_bedKi 7.24
-    #define  DEFAULT_bedKd 176.27
+    /* #define  DEFAULT_bedKp 71.43 */
+    /* #define  DEFAULT_bedKi 7.24 */
+    /* #define  DEFAULT_bedKd 176.27 */
+
+    #define  DEFAULT_bedKp 525.14
+    #define  DEFAULT_bedKi 100.16
+    #define  DEFAULT_bedKd 688.33
+
+ Classic PID
+ Kp: 525.14
+ Ki: 100.16
+ Kd: 688.33
 
 //120v 250W silicone heater into 4mm borosilicate (MendelMax 1.5+)
 //from pidautotune
@@ -444,14 +457,18 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
   #define Y_PROBE_OFFSET_FROM_EXTRUDER -8
   /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.70 */
   /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.35 */
-  #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.4
+  /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.4 */
+  /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.5 */
+  /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.55 */
+  /* #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.6 */
+  #define Z_PROBE_OFFSET_FROM_EXTRUDER -13.65
 
   #define Z_RAISE_BEFORE_HOMING 15       // (in mm) Raise Z before homing (G28) for Probe Clearance.
                                         // Be sure you have this distance over your Z_MAX_POS in case
 
   #define XY_TRAVEL_SPEED 8000         // X and Y axis travel speed between probes, in mm/min
 
-  #define Z_RAISE_BEFORE_PROBING 20   //How much the extruder will be raised before traveling to the first probing point.
+  #define Z_RAISE_BEFORE_PROBING 15   //How much the extruder will be raised before traveling to the first probing point.
   #define Z_RAISE_BETWEEN_PROBINGS 5  //How much the extruder will be raised when traveling from between next probing points
 
   //#define Z_PROBE_SLED // turn on if you have a z-probe mounted on a sled like those designed by Charles Bell
@@ -503,7 +520,8 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 
 // default settings
 
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,752.6}
+/* #define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,752.6} */
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80,80,4000,680}
 #define DEFAULT_MAX_FEEDRATE          {500, 500, 3, 25}    // (mm/sec)
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,100,10000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for Skeinforge 40+, for older versions raise them a lot.
 
